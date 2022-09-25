@@ -7,6 +7,7 @@ namespace LostMod.Common.Players
     public class VoodooDollPlayer : ModPlayer
     {
         private bool _canKillAngler = false;
+        
         public void AllowKillAngler() {
             _canKillAngler = true;
         }
