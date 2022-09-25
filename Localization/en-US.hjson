@@ -1,0 +1,13 @@
+﻿Mods: {
+	LostMod: {
+		ItemName: {
+			AnglerVoodooDoll: "Angler Voodoo Doll"
+		}
+		ItemTooltip: {
+			AnglerVoodooDoll: "{$ItemTooltip.ClothierVoodooDoll}"
+		}
+		RecipeGroup: {
+			FishingInfoAccessory: "Fishing info accessory"
+		}
+	}
+}

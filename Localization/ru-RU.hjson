@@ -1,0 +1,13 @@
+﻿Mods: {
+	LostMod: {
+		ItemName: {
+			AnglerVoodooDoll: "Кукла вуду рыбака"
+		}
+		ItemTooltip: {
+			AnglerVoodooDoll: "{$ItemTooltip.ClothierVoodooDoll}"
+		}
+		RecipeGroup: {
+			FishingInfoAccessory: "Рыбацкий информационный aксессуар"
+		}
+	}
+}

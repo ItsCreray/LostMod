@@ -1,0 +1,3 @@
+displayName = Lost Mod
+author = Creray
+version = 0.0.1
