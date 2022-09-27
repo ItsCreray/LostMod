@@ -13,12 +13,13 @@ namespace LostMod.Content.Recipes
 
         public override void AddRecipeGroups()
         {
+            string recipeGroupName = "FishingInfoAccessory";
             FishingInfoAccessoryRecipeGroup = new RecipeGroup(
-                () => $"{Language.GetTextValue("LegacyMisc.37")} {ModLang.GetRecipeGroup("FishingInfoAccessory")}",
+                ModLang.GetRecipeGroupCraftTooltip(recipeGroupName),
                 ItemID.Sextant,
                 ItemID.WeatherRadio,
                 ItemID.FishermansGuide);
-            RecipeGroup.RegisterGroup(ModLang.AddModNamespace("FishingInfoAccessory"), FishingInfoAccessoryRecipeGroup);
+            RecipeGroup.RegisterGroup(ModLang.AddModNamespace(recipeGroupName), FishingInfoAccessoryRecipeGroup);
         }
     }
 }
