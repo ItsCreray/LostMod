@@ -1,8 +1,7 @@
-﻿using Terraria;
-using Terraria.ModLoader;
-using Terraria.Localization;
+﻿using LostMod.Localization;
+using Terraria;
 using Terraria.ID;
-using LostMod.Localization;
+using Terraria.ModLoader;
 
 namespace LostMod.Content.Recipes
 {
@@ -11,11 +10,10 @@ namespace LostMod.Content.Recipes
 
         public static RecipeGroup FishingInfoAccessoryRecipeGroup { get; private set; }
 
-        public override void AddRecipeGroups()
-        {
+        public override void AddRecipeGroups() {
             string recipeGroupName = "FishingInfoAccessory";
             FishingInfoAccessoryRecipeGroup = new RecipeGroup(
-                ModLang.GetRecipeGroupCraftTooltip(recipeGroupName),
+                ModLang.GetRecipeGroupNameDelegate(recipeGroupName),
                 ItemID.Sextant,
                 ItemID.WeatherRadio,
                 ItemID.FishermansGuide);

@@ -2,6 +2,8 @@ using Terraria.ModLoader;
 
 namespace LostMod
 {
-	public class LostMod : Mod {
+	public class LostMod : Mod
+	{
+
 	}
 }
