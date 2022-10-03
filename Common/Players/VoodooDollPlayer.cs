@@ -54,7 +54,7 @@ namespace LostMod.Common.Players
 
         public override void ResetEffects() {
             bool isAnglerVoodooDollAccessoryRemoved = !_canKillAnglerTickFlag && _isAnglerVoodooDollEquipped;
-			if (isAnglerVoodooDollAccessoryRemoved) {
+	    if (isAnglerVoodooDollAccessoryRemoved) {
                 _isAnglerVoodooDollEquipped = false;
                 TrySetNPCVoodooDollAffectedStatus(ref _angler, false);
             }
