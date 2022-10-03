@@ -24,5 +24,9 @@ namespace LostMod.Localization
         }
 
         #endregion
+
+        public static string GetItemDropConditionDescription(string conditionName) {
+            return Language.GetTextValue($"Mods.{nameof(LostMod)}.Bestiary_ItemDropConditions.{conditionName}");
+        }
     }
 }

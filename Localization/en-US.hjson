@@ -9,5 +9,8 @@
 		RecipeGroup: {
 			FishingInfoAccessory: "Fishing info accessory"
 		}
+		Bestiary_ItemDropConditions: {
+			IsBloodMoon: "Drops during blood moon"
+		}
 	}
 }

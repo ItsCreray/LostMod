@@ -9,5 +9,8 @@
 		RecipeGroup: {
 			FishingInfoAccessory: "Рыбацкий информационный aксессуар"
 		}
+		Bestiary_ItemDropConditions: {
+			IsBloodMoon: "Выпадает во время кровавой луны"
+		}
 	}
 }
