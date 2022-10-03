@@ -27,10 +27,10 @@ namespace LostMod.Common.Players
             }
         }
 
-		public void AllowKillAngler() {
+	public void AllowKillAngler() {
             AffectNewNPCIfOldInvalid(ref _angler, NPCID.Angler);
 
-			if (!_isAnglerVoodooDollEquipped) {
+	    if (!_isAnglerVoodooDollEquipped) {
                 _isAnglerVoodooDollEquipped = true;
                 TrySetNPCVoodooDollAffectedStatus(ref _angler, true);
             }
