@@ -30,7 +30,7 @@ namespace LostMod.Common.Players
 
         public override void ResetEffects() {
             _canKillAngler = false;
-			IsAnyoneHoldingAnglerVoodooDoll = false;
-		}
+            IsAnyoneHoldingAnglerVoodooDoll = false;
+        }
     }
 }
