@@ -10,7 +10,7 @@ namespace LostMod.Common.GlobalNPCs
 	public class ModifiedLootVanillaNPC : GlobalNPC
 	{
 		public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot) {
-			if (npc.type == NPCID.Merchant) {		
+			if (npc.type == NPCID.Merchant) {
 				npcLoot.Add(ItemDropRule.ByCondition(new IsBloodMoon(), ModContent.ItemType<AnglerVoodooDoll>(), 8, 1));
 			}
 		}

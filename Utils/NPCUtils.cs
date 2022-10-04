@@ -4,7 +4,8 @@ using Terraria;
 
 namespace LostMod.Utils
 {
-	public static class NPCUtils {
+	public static class NPCUtils
+	{
 
 		public static NPC SearchFirstWithType(int npcId) {
 			return !NPC.npcsFoundForCheckActive[npcId] ?
@@ -28,6 +29,6 @@ namespace LostMod.Utils
 				}
 			}
 			return npcs;
-		} 
+		}
 	}
 }
