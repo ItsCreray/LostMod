@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace LostMod.Common.GlobalNPCs
 {
-    partial class VoodooDollAffectedNPC : GlobalNPC
+    public partial class VoodooDollAffectedNPC : GlobalNPC
     {
         public override bool InstancePerEntity => true;
 

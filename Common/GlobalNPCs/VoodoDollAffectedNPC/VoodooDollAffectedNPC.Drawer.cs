@@ -7,16 +7,16 @@ using Terraria.ModLoader;
 
 namespace LostMod.Common.GlobalNPCs
 {
-    partial class VoodooDollAffectedNPC : GlobalNPC
+    public partial class VoodooDollAffectedNPC : GlobalNPC
     {
         private static readonly Vector2[] EffectOffsetDirection;
 
         private const int MaxEffectTime = 15;
         private const int MaxShadowEffectDistance = 7;
 
-        private static int _effectTime;
-        private static bool _reverseEffectTime;
-        private static int _shadowRotationDirection;
+        private int _effectTime = 0;
+        private bool _reverseEffectTime = false;
+        private int _shadowRotationDirection = 1;
 
         public override bool PreDraw(NPC npc, SpriteBatch spriteBatch, Vector2 screenPos, Color drawColor) {
             if (IsVoodooooDollAffected) {
@@ -45,7 +45,7 @@ namespace LostMod.Common.GlobalNPCs
             }
         }
 
-        private static void UpdateEffectTime() {
+        private void UpdateEffectTime() {
             if (_reverseEffectTime) {
                 _effectTime--;
                 if (_effectTime < 0) {
@@ -70,9 +70,6 @@ namespace LostMod.Common.GlobalNPCs
                 new Vector2(0, -1),
                 new Vector2(-1, 0),
             };
-            _effectTime = 0;
-            _reverseEffectTime = false;
-            _shadowRotationDirection = 1;
         }
     }
 }
