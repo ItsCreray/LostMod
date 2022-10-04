@@ -15,6 +15,9 @@ namespace LostMod.Common.GlobalNPCs
         private const int MaxEffectTime = 15;
         private const int MaxShadowEffectDistance = 7;
 
+        private const float MinShadowOpacity = 0.2f;
+        private const float MaxOpacityOffset = 0.4f;
+
         private int _effectTime = 0;
         private bool _reverseEffectTime = false;
         private int _shadowRotationDirection = 1;
@@ -33,10 +36,12 @@ namespace LostMod.Common.GlobalNPCs
             Vector2 drawOrigin = npc.frame.Size() / 2;
             Vector2 drawPositionOrigin = npc.Center - screenPos;
 
+            drawOrigin.Y += 2;
+
             float effectTimeFactor = (float)_effectTime / MaxEffectTime;
             float shadowEffectDistance = effectTimeFactor * MaxShadowEffectDistance;
 
-            Color modifiedDrawColor = npc.GetAlpha(drawColor) * (0.1f + (0.3f * effectTimeFactor));
+            Color modifiedDrawColor = npc.GetAlpha(drawColor) * (MinShadowOpacity + (MaxOpacityOffset * (1 - effectTimeFactor)));
 
             for (int i = 0; i < 4; i++) {
                 Vector2 rotatedOffsetDirection = EffectOffsetDirection[i].RotatedBy(Math.PI * _shadowRotationDirection * effectTimeFactor);
