@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using LostMod.Common.Players;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using Terraria;
@@ -19,7 +20,7 @@ namespace LostMod.Common.GlobalNPCs
         private int _shadowRotationDirection = 1;
 
         public override bool PreDraw(NPC npc, SpriteBatch spriteBatch, Vector2 screenPos, Color drawColor) {
-            if (IsVoodooooDollAffected) {
+            if (VoodooDollPlayer.IsAnyoneHoldingAnglerVoodooDoll) {
                 DrawIllusions(npc, spriteBatch, screenPos, drawColor);
                 UpdateEffectTime();
             }
